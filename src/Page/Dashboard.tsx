@@ -45,29 +45,32 @@ function Dashboard() {
   })
 
   return (
-    <Page> 
-      <Edit/>
-      <Confirmation/>
-      <Add/>
-      <MainContainer>
+    <>
+      <>
+        <Edit/>
+        <Confirmation/>
+        <Add/>
+      </>
+      <Page> 
+        <MainContainer>
 
-        <Header>
-          <Title> User list </Title>
-          <AddButton onClick={() => dispatch(enable({modal: 'add'}))}> Add new </AddButton>
-        </Header>
+          <Header>
+            <Title> User list </Title>
+            <AddButton onClick={() => dispatch(enable({modal: 'add'}))}> Add new </AddButton>
+          </Header>
 
-        <Line/>
+          <Line/>
 
-        <UsersContainer>
-            <Lable/>
-            {users.map(user => 
-              <User key={user.id} user={user}/> 
-            )}
-        </UsersContainer>
+          <UsersContainer>
+              <Lable/>
+              {users.map(user => 
+                <User key={user.id} user={user}/> 
+              )}
+          </UsersContainer>
 
-      </MainContainer>
-
-    </Page>
+        </MainContainer>
+      </Page>
+    </>
   )
 }
 

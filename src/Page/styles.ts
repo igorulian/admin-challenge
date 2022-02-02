@@ -3,19 +3,27 @@ import { colors } from '../colors'
 
 export const Page = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     background-color: #fff;
+    padding-top: 10%;
+    padding-bottom: 50px;
+    @media (max-width: 900px){
+        padding: 0;
+    }
 `
 
 export const MainContainer = styled.div`
     width: 60%;
-    height: 70%;
+    height: fit-content;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    @media (max-width: 1400px) {
+        width: 80%;
+    }
     @media (max-width: 900px) {
         width: 100%;
         height: 100%;

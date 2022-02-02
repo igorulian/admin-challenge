@@ -10,9 +10,9 @@ export const Background = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
+    position: fixed;
     z-index: 1;
 `
 
