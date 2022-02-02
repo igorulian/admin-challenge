@@ -1,5 +1,5 @@
 import React from "react"
-import { Background, Container, Content, EditButton, EditButtonContainer, EditInput, EditInputContainer, EditInputLable, Header, Text, Title} from "./styles"
+import { Background, Container, Content, EditButton, EditButtonContainer, Header, Text, Title} from "./styles"
 import { IoMdClose } from 'react-icons/io'
 import { colors } from "../../colors"
 import { useDispatch, useSelector } from "react-redux"
