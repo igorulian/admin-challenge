@@ -30,3 +30,10 @@ export function edit(prop:IEdit){
         payload: prop
     }
 }
+
+export function set(users:any){
+    return {
+        type: 'SET',
+        payload: users
+    }
+}

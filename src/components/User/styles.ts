@@ -13,13 +13,32 @@ export const Container = styled.div`
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 `
 
-export const Text = styled.p`
+export const TextContainer = styled.div`
     display: flex;
-    font-family: 'Roboto', sans-serif;
     width: 100%;
     align-items: center;
     justify-content: center;
+`
+
+export const Text = styled.p`
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    word-break: break-all;
+    align-items: center;
+    justify-content: center;
     color: #121212;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    @media (max-width: 900px) {
+        font-size: 12px;
+        max-width: 100px;
+    }
+    @media (max-width: 1400px) {
+        font-size: 14px;
+    }
 `
 
 export const Button = styled.div`

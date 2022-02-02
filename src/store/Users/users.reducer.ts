@@ -12,6 +12,8 @@ export default function UsersReducer(state:IUser[] = [], action:IAction) {
         case 'EDIT':
             state[action.payload.position] = action.payload.user
             return [...state]
+        case 'SET':
+            return [...action.payload]
         default:
             return state
     }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container, Text } from './styles'
+import { Button, Container, Text, TextContainer } from './styles'
 import { colors } from '../../colors'
 import { FiEdit, FiTrash2 } from "react-icons/fi";
 import { useDispatch } from 'react-redux';
@@ -28,11 +28,22 @@ export function User(props:IUserProps){
 
     return (
         <Container>
-            <Text> {user.id} </Text>
-            <Text> {user.name} </Text>
-            <Text> {user.username} </Text>
-            <Text> {user.email} </Text>
-            <Text> {user.city} </Text>
+            <TextContainer>
+                <Text> {user.id} </Text>
+            </TextContainer>
+            <TextContainer>
+                <Text> {user.name} </Text>
+            </TextContainer>
+            <TextContainer>
+                <Text> {user.username} </Text>
+            </TextContainer>
+            <TextContainer>
+                <Text> {user.email} </Text>
+            </TextContainer>
+            <TextContainer>
+                <Text> {user.city} </Text>
+            </TextContainer>
+
             <Button>
                 <FiEdit 
                     style={{cursor: 'pointer'}} 
