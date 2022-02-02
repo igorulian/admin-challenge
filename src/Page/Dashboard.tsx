@@ -21,18 +21,21 @@ function Dashboard() {
       if(firstTime){
         try{
           const {data} = await axios.get('https://my-json-server.typicode.com/karolkproexe/jsonplaceholderdb/data')
+          let newUsers:IUser[] = []
+
           data.forEach((user:any) => {
             const {id,name,username,email,address} = user
-            return { 
+            const {city} = address
+            newUsers.push({ 
               id,
               name,
               username,
               email,
-              city: address.city
-            }
+              city
+            })
           })
-          
-          dispatch(set(data))
+
+          dispatch(set(newUsers))
         }catch(err){
           console.log('ERROR', err)
         }

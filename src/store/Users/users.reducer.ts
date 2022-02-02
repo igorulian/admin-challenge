@@ -13,6 +13,7 @@ export default function UsersReducer(state:IUser[] = [], action:IAction) {
             state[action.payload.position] = action.payload.user
             return [...state]
         case 'SET':
+            console.log('payload', action.payload)
             return [...action.payload]
         default:
             return state
